@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSum", "ThreeSum\ThreeSum.csproj", "{C257EA5A-E37F-40A8-B640-5EDD85BD59ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms_DataStruct_Lib", "Algorithms_DataStruct_Lib\Algorithms_DataStruct_Lib.csproj", "{8D2E021B-BC11-4B23-A6F0-F4617508825B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms_DataStruct_Lib.Tests", "Algorithms_DataStruct_Lib.Tests\Algorithms_DataStruct_Lib.Tests.csproj", "{4187C314-44FB-4AA5-957E-4E7A3C4CE3D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms_CSharp_Course", "Algorithms_CSharp_Course3\Algorithms_CSharp_Course.csproj", "{23620CF4-E11B-481B-8B59-5456F6CE7776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C257EA5A-E37F-40A8-B640-5EDD85BD59ED}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{C257EA5A-E37F-40A8-B640-5EDD85BD59ED}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{C257EA5A-E37F-40A8-B640-5EDD85BD59ED}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{C257EA5A-E37F-40A8-B640-5EDD85BD59ED}.Release|anycpu.Build.0 = Release|Any CPU
+		{8D2E021B-BC11-4B23-A6F0-F4617508825B}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{8D2E021B-BC11-4B23-A6F0-F4617508825B}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{8D2E021B-BC11-4B23-A6F0-F4617508825B}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{8D2E021B-BC11-4B23-A6F0-F4617508825B}.Release|anycpu.Build.0 = Release|Any CPU
+		{4187C314-44FB-4AA5-957E-4E7A3C4CE3D2}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{4187C314-44FB-4AA5-957E-4E7A3C4CE3D2}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{4187C314-44FB-4AA5-957E-4E7A3C4CE3D2}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{4187C314-44FB-4AA5-957E-4E7A3C4CE3D2}.Release|anycpu.Build.0 = Release|Any CPU
+		{23620CF4-E11B-481B-8B59-5456F6CE7776}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{23620CF4-E11B-481B-8B59-5456F6CE7776}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{23620CF4-E11B-481B-8B59-5456F6CE7776}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{23620CF4-E11B-481B-8B59-5456F6CE7776}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

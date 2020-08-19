@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms_DataStruct_Lib\Algorithms_DataStruct_Lib.csproj" />
+    <ProjectReference Include="..\ThreeSum\ThreeSum.csproj" />
+  </ItemGroup>
+</Project>
