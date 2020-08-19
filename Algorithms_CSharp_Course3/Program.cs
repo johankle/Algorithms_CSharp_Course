@@ -16,70 +16,9 @@ namespace Algorithms_CSharp_Course
     {
         static void Main(string[] args)
         {
-            BinarySearchSt<char, int> bsst = new BinarySearchSt<char, int>(5);
-
-            //char ch = 'b';
-            //int num = 1;
-
-            //for (int i = 0; i < bsst.Capacity; i++)
-            //{
-            //    Console.WriteLine(ch + " " + num);
-            //    bsst.Add(ch++, num++);
-
-            //}
-
-            bsst.Add('c', 2);
-            bsst.Add('f', 5);
-            bsst.Add('b', 1);
-            bsst.Add('d', 3);
-            bsst.Add('e', 4);
-
-            Console.WriteLine(bsst.Count);
-            Console.WriteLine("Min, should be b: " + bsst.Min());
-            Console.WriteLine("Max, should be f: " + bsst.Max());
-
-            bsst.RemoveMin();
-            bsst.RemoveMax();
-
-            Console.WriteLine("Min, should be c: " + bsst.Min());
-            Console.WriteLine("Max, should be e: " + bsst.Max());
-
-            bsst.Add('b', 1);
-            bsst.Add('f', 5);
-
-            Console.WriteLine("Select index 2, should be d: " + bsst.Select(2));
-            Console.WriteLine("Select index 4, should be f: " + bsst.Select(4));
-
-            Console.WriteLine("Ceiling b, should be b: " + bsst.Ceiling('b'));
-            Console.WriteLine("Ceiling a, should be b: " + bsst.Ceiling('a'));
-            Console.WriteLine("Ceiling g, should be null: " + bsst.Ceiling('g'));
-            Console.WriteLine("Ceiling d, should be d: " + bsst.Ceiling('d'));
-
-            Console.WriteLine("Floor e, should be e: " + bsst.Floor('e'));
-            Console.WriteLine("Floor a, should be null: " + bsst.Floor('a'));
-            Console.WriteLine("Floor g, should be f: " + bsst.Floor('g'));
-
-            Console.WriteLine("Range b & f: ");
-            var range = bsst.Range('b', 'f');
-
-            //Console.WriteLine("Range a & f: ");
-            //array = bsst.Range('a', 'f');
-
-            //Console.WriteLine("Range e & h: ");
-            //array = bsst.Range('e', 'h');
-
-            //Console.WriteLine("Range b & c: ");
-            //array = bsst.Range('b', 'c');
-
-            //Console.WriteLine("Range g & h: ");
-            //array = bsst.Range('g', 'h');
-
-            Console.WriteLine("Range a & g: ");
-            range = bsst.Range('a', 'g');
-
-            foreach (var item in range)
+            foreach (var prime in Prime.Sieve(30))
             {
-                Console.Write(item + " ");
+                Console.WriteLine(prime);
             }
 
 
@@ -148,6 +87,113 @@ namespace Algorithms_CSharp_Course
 
             //Console.Read();
 
+        }
+
+        public static void HashingDemo()
+        {
+            //    var books = new Dictionary<int, string>();
+            //    books.Add(3, "The Lord of the Rings");
+            //    books.Add(2, "A Tale of Two Cities");
+
+            //    string bookName = books[3];
+
+            //    Console.WriteLine(bookName);
+
+            //    books.Add(3, "Harry Potter and the Philosopher's Stone");
+
+            var number1 = new PhoneNumber("141804", "27", "90319334");
+            var number2 = new PhoneNumber("141804", "27", "90319334");
+            //var number3 = new PhoneNumber() { AreaCode = "141804", Exchange = "27", Number = "90319334" };
+
+            Console.WriteLine(number1.GetHashCode());
+            Console.WriteLine(number2.GetHashCode());
+            Console.WriteLine(number1 == number2);
+            Console.WriteLine(number1.Equals(number2));
+
+            var customers = new Dictionary<PhoneNumber, Person>();
+            customers.Add(number1, new Person());
+            //customers.Add(number2, new Person());
+
+            Console.WriteLine(customers.ContainsKey(number1));
+
+            //number1.AreaCode = "141805";
+
+            Console.WriteLine(customers.ContainsKey(number1));
+
+            // -------------------------------
+
+            Console.WriteLine("After adding phone numbers.");
+
+            //var c = customers[number2];
+        }
+
+        public static void BinarySearchStDemo()
+        {
+            BinarySearchSt<char, int> bsst = new BinarySearchSt<char, int>(5);
+
+            //char ch = 'b';
+            //int num = 1;
+
+            //for (int i = 0; i < bsst.Capacity; i++)
+            //{
+            //    Console.WriteLine(ch + " " + num);
+            //    bsst.Add(ch++, num++);
+
+            //}
+
+            bsst.Add('c', 2);
+            bsst.Add('f', 5);
+            bsst.Add('b', 1);
+            bsst.Add('d', 3);
+            bsst.Add('e', 4);
+
+            Console.WriteLine(bsst.Count);
+            Console.WriteLine("Min, should be b: " + bsst.Min());
+            Console.WriteLine("Max, should be f: " + bsst.Max());
+
+            bsst.RemoveMin();
+            bsst.RemoveMax();
+
+            Console.WriteLine("Min, should be c: " + bsst.Min());
+            Console.WriteLine("Max, should be e: " + bsst.Max());
+
+            bsst.Add('b', 1);
+            bsst.Add('f', 5);
+
+            Console.WriteLine("Select index 2, should be d: " + bsst.Select(2));
+            Console.WriteLine("Select index 4, should be f: " + bsst.Select(4));
+
+            Console.WriteLine("Ceiling b, should be b: " + bsst.Ceiling('b'));
+            Console.WriteLine("Ceiling a, should be b: " + bsst.Ceiling('a'));
+            Console.WriteLine("Ceiling g, should be null: " + bsst.Ceiling('g'));
+            Console.WriteLine("Ceiling d, should be d: " + bsst.Ceiling('d'));
+
+            Console.WriteLine("Floor e, should be e: " + bsst.Floor('e'));
+            Console.WriteLine("Floor a, should be null: " + bsst.Floor('a'));
+            Console.WriteLine("Floor g, should be f: " + bsst.Floor('g'));
+
+            Console.WriteLine("Range b & f: ");
+            var range = bsst.Range('b', 'f');
+
+            //Console.WriteLine("Range a & f: ");
+            //array = bsst.Range('a', 'f');
+
+            //Console.WriteLine("Range e & h: ");
+            //array = bsst.Range('e', 'h');
+
+            //Console.WriteLine("Range b & c: ");
+            //array = bsst.Range('b', 'c');
+
+            //Console.WriteLine("Range g & h: ");
+            //array = bsst.Range('g', 'h');
+
+            Console.WriteLine("Range a & g: ");
+            range = bsst.Range('a', 'g');
+
+            foreach (var item in range)
+            {
+                Console.Write(item + " ");
+            }
         }
 
         public static void LinearSearchDemo()
